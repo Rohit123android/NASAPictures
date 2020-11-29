@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/card_margin_left_right"
+        android:layout_marginRight="@dimen/card_margin_left_right"
+        android:layout_marginTop="@dimen/card_margin_top_bottom"
+        android:layout_marginBottom="@dimen/card_margin_top_bottom"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        app:cardCornerRadius="@dimen/card_corner_radious">
+
+        <RelativeLayout
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pic_nasa"
+                android:transitionName="img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/grid_image_height"
+                android:scaleType="centerCrop"
+                tools:ignore="UnusedAttribute" />
+
+
+
+            <FrameLayout
+                android:id="@+id/layoutDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/date_layout_padding"
+                android:layout_below="@+id/pic_nasa"
+                android:background="@drawable/round_white"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/date_layout_right_margin"
+                android:layout_marginTop="@dimen/date_layout_top_margin">
+
+                <ImageView
+                    android:src="@drawable/ic_date"
+                    android:layout_width="@dimen/date_drawable_height_width"
+                    android:layout_height="@dimen/date_drawable_height_width"
+                    android:layout_marginLeft="@dimen/date_drawable_margin_left_right"
+                    android:layout_marginRight="@dimen/date_drawable_margin_left_right" />
+                <TextView
+                    android:textColor="@color/date_text_color"
+                    android:id="@+id/pic_list_date"
+                    android:layout_marginLeft="@dimen/date_text_margin_left"
+                    android:layout_marginRight="@dimen/date_text_margin_right"
+                    android:text="@string/default_pic_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

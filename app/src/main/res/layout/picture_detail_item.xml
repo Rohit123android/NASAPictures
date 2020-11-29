@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/card_margin_left_right"
+        android:layout_marginRight="@dimen/card_margin_left_right"
+        android:layout_marginTop="@dimen/card_margin_top_bottom"
+        android:layout_marginBottom="@dimen/card_margin_top_bottom"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        app:cardCornerRadius="@dimen/card_corner_radious">
+
+        <RelativeLayout
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detail_img"
+                android:transitionName="img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_image_height"
+                android:scaleType="centerCrop"
+                tools:ignore="UnusedAttribute" />
+
+            <ImageView
+                android:id="@+id/shadow_bottom"
+                android:src="@drawable/bottom_shadow"
+                android:layout_alignBottom="@id/detail_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_shadow_height" />
+
+
+            <FrameLayout
+                android:id="@+id/layoutDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/date_layout_padding"
+                android:layout_below="@+id/detail_img"
+                android:background="@drawable/round_white"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/date_layout_right_margin"
+                android:layout_marginTop="@dimen/date_layout_top_margin">
+
+                <ImageView
+                    android:src="@drawable/ic_date"
+                    android:layout_width="@dimen/date_drawable_height_width"
+                    android:layout_height="@dimen/date_drawable_height_width"
+                    android:layout_marginLeft="@dimen/date_drawable_margin_left_right"
+                    android:layout_marginRight="@dimen/date_drawable_margin_left_right" />
+                <TextView
+                    android:textColor="@color/date_text_color"
+                    android:id="@+id/pic_date"
+                    android:layout_marginLeft="@dimen/date_text_margin_left"
+                    android:layout_marginRight="@dimen/date_text_margin_right"
+                    android:text="@string/default_pic_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="@dimen/title_text_margin_left_right"
+                android:layout_marginRight="@dimen/title_text_margin_left_right"
+                android:text="@string/default_pic_date_text"
+                android:textSize="@dimen/title_text_size"
+                android:layout_marginTop="@dimen/title_text_margin_top"
+                android:layout_below="@id/detail_img"
+                android:id="@+id/pic_title" />
+
+
+            <TextView
+                android:id="@+id/pic_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pic_title"
+                android:layout_marginLeft="@dimen/title_text_margin_left_right"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:singleLine="false"
+                android:layout_marginRight="@dimen/title_text_margin_left_right"
+                android:layout_marginBottom="@dimen/desc_text_margin_top_bottom"
+                android:layout_marginTop="@dimen/desc_text_margin_top_bottom"
+                android:text="@string/default_pic_desc_text"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

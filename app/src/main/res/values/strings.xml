@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NASA Pictures</string>
+    <string name="default_pic_desc_text">Desc</string>
+    <string name="default_pic_title_text">Title</string>
+    <string name="default_pic_date_text">01 January 1990</string>
+    <string name="image_grid_screen"> NASA Images</string>
+    <string name="image_detail_screen"> NASA Image Detail </string>
+</resources>
